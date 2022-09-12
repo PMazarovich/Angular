@@ -1,0 +1,8 @@
+<!---Обратить внимание, тут используются методы объекта mService--->
+<div *ngIf="mService.messages.length!=0">
+
+  <h2>Messages</h2>
+  <button class="clear" (click)="mService.clear()">clear</button>
+  <div *ngFor='let message of mService.messages'> {{message}} </div>
+
+</div>

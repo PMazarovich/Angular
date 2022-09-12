@@ -1,0 +1,26 @@
+<!---Если выполняется условие, то вывести блок div--->
+<div *ngIf="hero!=undefined">
+  <h2>{{hero.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <!---Обратить внимание. ngModel используется для того, чтобы переопределить поле связанного компонента--->
+      <input [(ngModel)]="hero.name" placeholder="name"/>
+    </label>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>
+<!----<p>hero details is here
+  <p>
+  <button (click) = "goBack()">Back</button>
+  <div>selected hero id is {{hero.id}} and name is {{hero.name}} </div>
+  <button (click)="save()">save</button>
+ <h2>{{hero.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero.id}}</div>
+  <div>
+    <label>name:
+      <input placeholder="name"/>
+    </label>
+  </div>
+--->
